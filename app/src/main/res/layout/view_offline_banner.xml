@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- "Offline" label (CA-05). Shown by OfflineBannerHelper. -->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/textOfflineBanner"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_level_advisory"
+    android:gravity="center"
+    android:padding="@dimen/space_8"
+    android:textColor="@color/black"
+    android:textSize="@dimen/text_caption"
+    android:textStyle="bold"
+    android:visibility="gone" />

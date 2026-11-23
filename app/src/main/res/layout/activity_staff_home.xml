@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A20 Staff home: overview with key numbers (DR-01 in the app), lakes to review, bottom bar -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_page"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".staff.StaffHomeActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/space_24">
+
+        <!-- Header: greeting + role, theme button, bell with count -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textStaffHomeGreeting"
+                    style="@style/Cryonix.Text.Heading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/textStaffHomeRole"
+                    style="@style/Cryonix.Text.Chip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_8" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/buttonStaffHomeTheme"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/staff_home_theme_button"
+                android:src="@drawable/ic_theme"
+                app:tint="@color/color_text_primary" />
+
+            <FrameLayout
+                android:layout_width="48dp"
+                android:layout_height="48dp">
+
+                <ImageButton
+                    android:id="@+id/buttonStaffHomeBell"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/staff_home_bell_button"
+                    android:src="@drawable/ic_alert_bell"
+                    app:tint="@color/color_text_primary" />
+
+                <TextView
+                    android:id="@+id/textStaffHomeBellCount"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="top|end"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:background="@drawable/bg_badge_count"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textStaffHomeValleys"
+            style="@style/Cryonix.Text.Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_8"
+            android:visibility="gone" />
+
+        <TextView
+            style="@style/Cryonix.Text.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_24"
+            android:text="@string/staff_home_overview" />
+
+        <!-- 2 x 2 key numbers -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_16"
+            android:orientation="horizontal">
+
+            <include
+                android:id="@+id/tileStaffHomeLakes"
+                layout="@layout/item_key_number" />
+
+            <View
+                android:layout_width="@dimen/space_16"
+                android:layout_height="0dp" />
+
+            <include
+                android:id="@+id/tileStaffHomeAlerts"
+                layout="@layout/item_key_number" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_16"
+            android:orientation="horizontal">
+
+            <include
+                android:id="@+id/tileStaffHomeNodes"
+                layout="@layout/item_key_number" />
+
+            <View
+                android:layout_width="@dimen/space_16"
+                android:layout_height="0dp" />
+
+            <include
+                android:id="@+id/tileStaffHomePeople"
+                layout="@layout/item_key_number" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/Cryonix.Text.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_24"
+            android:text="@string/staff_home_levels_title" />
+
+        <!-- One badge + count per level; filled in code -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_8"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/layoutStaffHomeLevels"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" />
+        </HorizontalScrollView>
+
+        <!-- Only for roles that can review lakes -->
+        <LinearLayout
+            android:id="@+id/layoutStaffHomeReview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_24"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/Cryonix.Text.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/staff_home_review_title" />
+
+            <LinearLayout
+                android:id="@+id/layoutStaffHomeReviewList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <TextView
+                android:id="@+id/textStaffHomeNoReview"
+                style="@style/Cryonix.Text.Secondary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_8"
+                android:text="@string/staff_home_no_review"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/view_staff_bottom_bar" />
+</LinearLayout>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A14 Full-screen alert (CA-03). Background colour = alert level, set in code. -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutFullAlertRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    tools:context=".community.FullScreenAlertActivity">
+
+    <LinearLayout
+        android:id="@+id/layoutFullAlertContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/space_32">
+
+        <TextView
+            android:id="@+id/textFullAlertPractice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:gravity="center"
+            android:padding="@dimen/space_8"
+            android:text="@string/full_alert_practice"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/imageFullAlertIcon"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_marginTop="@dimen/space_32"
+            android:importantForAccessibility="no"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/textFullAlertLevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_16"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textFullAlertLake"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_4"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_title" />
+
+        <TextView
+            android:id="@+id/textFullAlertMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_24"
+            android:gravity="center"
+            android:lineSpacingExtra="4dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_title" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_32"
+            android:background="@drawable/bg_full_alert_box"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/space_16">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/full_alert_safe_point"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_body" />
+
+            <TextView
+                android:id="@+id/textFullAlertSafePoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_4"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_heading"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonFullAlertRoute"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginTop="@dimen/space_24"
+            android:background="@drawable/bg_full_alert_button"
+            android:text="@string/full_alert_route"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_title"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonFullAlertStop"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="@dimen/space_16"
+            android:background="@drawable/bg_full_alert_box"
+            android:text="@string/full_alert_stop"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_body_large" />
+
+        <TextView
+            android:id="@+id/textFullAlertTapHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_16"
+            android:text="@string/full_alert_tap_hint"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_caption" />
+    </LinearLayout>
+</ScrollView>

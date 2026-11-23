@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A24 Flood scenarios of a lake (FS-01) and arrival time at each village (FS-03) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_page"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".flood.FloodScenarioActivity">
+
+    <include layout="@layout/view_top_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/space_24"
+        android:paddingEnd="@dimen/space_24"
+        android:paddingBottom="@dimen/space_24">
+
+        <TextView
+            android:id="@+id/textFloodLakeName"
+            style="@style/Cryonix.Text.Heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/toggleFloodScenario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_16"
+            app:checkedButton="@+id/buttonFloodWorst"
+            app:selectionRequired="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonFloodSmall"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/flood_small" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonFloodMedium"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/flood_medium" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonFloodWorst"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/flood_worst" />
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <!-- FS-01: release volume, model, run date -->
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Cryonix.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_16">
+
+            <LinearLayout
+                android:id="@+id/layoutFloodInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/space_16"
+                android:paddingTop="@dimen/space_8"
+                android:paddingEnd="@dimen/space_16"
+                android:paddingBottom="@dimen/space_8" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- FS-03: arrival map -->
+        <TextView
+            style="@style/Cryonix.Text.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_24"
+            android:text="@string/flood_arrival_title" />
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Cryonix.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_8">
+
+            <com.example.cryonix.flood.FloodArrivalMapView
+                android:id="@+id/mapFloodArrival"
+                android:layout_width="match_parent"
+                android:layout_height="300dp" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_8"
+            android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Cryonix.Text.Caption"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableStart="@drawable/bg_unread_dot"
+                    android:drawablePadding="4dp"
+                    android:drawableTint="@color/color_level_warning"
+                    android:text="@string/flood_band_1" />
+                <TextView
+                    style="@style/Cryonix.Text.Caption"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableStart="@drawable/bg_unread_dot"
+                    android:drawablePadding="4dp"
+                    android:drawableTint="@color/color_level_watch"
+                    android:text="@string/flood_band_2" />
+                <TextView
+                    style="@style/Cryonix.Text.Caption"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableStart="@drawable/bg_unread_dot"
+                    android:drawablePadding="4dp"
+                    android:drawableTint="@color/color_level_advisory"
+                    android:text="@string/flood_band_3" />
+                <TextView
+                    style="@style/Cryonix.Text.Caption"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableStart="@drawable/bg_unread_dot"
+                    android:drawablePadding="4dp"
+                    android:drawableTint="@color/color_level_all_clear"
+                    android:text="@string/flood_band_4" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutFloodArrivals"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_8"
+            android:orientation="vertical" />
+
+        <!-- EV-02: open the house time margins (officers and admins) -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonFloodTimeMargin"
+            style="@style/Cryonix.Button.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginTop="@dimen/space_16"
+            android:text="@string/margin_open"
+            android:visibility="gone"
+            app:icon="@drawable/ic_people" />
+
+        <!-- FS-03: say clearly these are model estimates -->
+        <TextView
+            style="@style/Cryonix.Text.Body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_16"
+            android:background="@drawable/bg_chip"
+            android:padding="@dimen/space_16"
+            android:text="@string/flood_estimate_note" />
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

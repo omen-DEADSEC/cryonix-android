@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A10 Shelters near me (CA-06) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_page"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".community.SheltersActivity">
+
+    <include layout="@layout/view_offline_banner" />
+
+    <include layout="@layout/view_top_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/space_24"
+            android:paddingEnd="@dimen/space_24"
+            android:paddingBottom="@dimen/space_24">
+
+            <LinearLayout
+                android:id="@+id/layoutSheltersList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/view_community_bottom_bar" />
+</LinearLayout>

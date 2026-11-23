@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- AC-10 Audit log (admin only, read only) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_page"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".admin.AuditLogActivity">
+
+    <include layout="@layout/view_top_bar" />
+
+    <TextView
+        style="@style/Cryonix.Text.Secondary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/space_24"
+        android:paddingEnd="@dimen/space_24"
+        android:text="@string/audit_log_text" />
+
+    <TextView
+        android:id="@+id/textAuditLogEmpty"
+        style="@style/Cryonix.Text.Secondary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/space_24"
+        android:text="@string/audit_log_empty"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/layoutAuditLogList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/space_24"
+            android:paddingEnd="@dimen/space_24"
+            android:paddingBottom="@dimen/space_24" />
+    </ScrollView>
+
+</LinearLayout>

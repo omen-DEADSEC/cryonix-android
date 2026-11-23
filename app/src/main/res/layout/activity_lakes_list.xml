@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A21 Lakes (LM-04): list or map, search, filters by level, district and size, sort -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_page"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".lakes.LakesListActivity">
+
+    <include layout="@layout/view_top_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/space_24">
+
+        <!-- List / Map switch -->
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/toggleLakesView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_24"
+            android:layout_marginEnd="@dimen/space_24"
+            app:checkedButton="@+id/buttonLakesViewList"
+            app:selectionRequired="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonLakesViewList"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/lakes_view_list" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonLakesViewMap"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/lakes_view_map" />
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Cryonix.TextInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_24"
+            android:layout_marginTop="@dimen/space_8"
+            android:layout_marginEnd="@dimen/space_24"
+            android:hint="@string/lakes_search_hint"
+            app:startIconDrawable="@drawable/ic_search">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editLakesSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Level chips are added in code: All, Warning, Watch, Advisory, Baseline -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_16"
+            android:clipToPadding="false"
+            android:paddingStart="@dimen/space_24"
+            android:paddingEnd="@dimen/space_24"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/layoutLakesFilters"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" />
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_24"
+            android:layout_marginTop="@dimen/space_8"
+            android:layout_marginEnd="@dimen/space_24"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/Cryonix.Text.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lakes_district" />
+
+                <Spinner
+                    android:id="@+id/spinnerLakesDistrict"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/Cryonix.Text.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lakes_size" />
+
+                <Spinner
+                    android:id="@+id/spinnerLakesSize"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_24"
+            android:layout_marginEnd="@dimen/space_24"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/Cryonix.Text.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lakes_sort" />
+
+                <Spinner
+                    android:id="@+id/spinnerLakesSort"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textLakesEmpty"
+            style="@style/Cryonix.Text.Secondary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/space_24"
+            android:text="@string/lakes_empty"
+            android:visibility="gone" />
+
+        <!-- Map view (LM-04) -->
+        <LinearLayout
+            android:id="@+id/layoutLakesMap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_24"
+            android:layout_marginEnd="@dimen/space_24"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Cryonix.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_8">
+
+                <com.example.cryonix.lakes.LakesMapView
+                    android:id="@+id/mapLakes"
+                    android:layout_width="match_parent"
+                    android:layout_height="320dp" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                style="@style/Cryonix.Text.Caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_8"
+                android:text="@string/lakes_map_hint" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutLakesList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/space_24"
+            android:paddingEnd="@dimen/space_24" />
+    </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/view_staff_bottom_bar" />
+</LinearLayout>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A23 Review flagged lake (officer and admin) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_page"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".lakes.ReviewLakeActivity">
+
+    <include layout="@layout/view_top_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/space_24"
+        android:paddingEnd="@dimen/space_24"
+        android:paddingBottom="@dimen/space_24">
+
+        <TextView
+            android:id="@+id/textReviewLevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_body"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textReviewLakeName"
+            style="@style/Cryonix.Text.Heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_8" />
+
+        <!-- LM-07: image, outline and model confidence -->
+        <TextView
+            style="@style/Cryonix.Text.Secondary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_16"
+            android:text="@string/review_image_title" />
+
+        <com.example.cryonix.lakes.LakeOutlineView
+            android:id="@+id/outlineReview"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="@dimen/space_8" />
+
+        <TextView
+            style="@style/Cryonix.Text.Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_4"
+            android:text="@string/lake_detail_images_note" />
+
+        <TextView
+            android:id="@+id/textReviewFlagReason"
+            style="@style/Cryonix.Text.Body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_16"
+            android:background="@drawable/bg_message_error"
+            android:padding="@dimen/space_16" />
+
+        <TextView
+            style="@style/Cryonix.Text.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_24"
+            android:text="@string/review_question" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupReviewDecision"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_8">
+
+            <RadioButton
+                android:id="@+id/radioReviewConfirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="@string/review_confirm" />
+
+            <RadioButton
+                android:id="@+id/radioReviewKeep"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="@string/review_keep" />
+
+            <RadioButton
+                android:id="@+id/radioReviewDismiss"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="@string/review_dismiss" />
+        </RadioGroup>
+
+        <!-- Only when "Confirm" is chosen -->
+        <LinearLayout
+            android:id="@+id/layoutReviewNewLevel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_32"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/Cryonix.Text.Secondary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/review_new_level" />
+
+            <Spinner
+                android:id="@+id/spinnerReviewNewLevel"
+                android:layout_width="match_parent"
+                android:layout_height="48dp" />
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputLayoutReviewNote"
+            style="@style/Cryonix.TextInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_16"
+            android:hint="@string/review_note_hint">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editReviewNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:inputType="textMultiLine|textCapSentences"
+                android:minLines="3" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textReviewError"
+            style="@style/Cryonix.Text.Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_8"
+            android:textColor="@color/color_error"
+            android:visibility="gone" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonReviewSave"
+            style="@style/Cryonix.Button.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginTop="@dimen/space_24"
+            android:text="@string/review_save" />
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

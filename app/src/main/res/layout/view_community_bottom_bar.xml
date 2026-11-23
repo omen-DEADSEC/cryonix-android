@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Community bottom bar: Home, Map, Shelters, Alerts. Set up with CommunityBottomBarHelper. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:background="@drawable/bg_bottom_bar"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/tabCommunityHome"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageTabCommunityHome"
+            android:layout_width="@dimen/icon_medium"
+            android:layout_height="@dimen/icon_medium"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_home" />
+
+        <TextView
+            android:id="@+id/textTabCommunityHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="@string/tab_home"
+            android:textSize="@dimen/text_caption" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tabCommunityMap"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageTabCommunityMap"
+            android:layout_width="@dimen/icon_medium"
+            android:layout_height="@dimen/icon_medium"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_offline_map" />
+
+        <TextView
+            android:id="@+id/textTabCommunityMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="@string/tab_map"
+            android:textSize="@dimen/text_caption" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tabCommunityShelters"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageTabCommunityShelters"
+            android:layout_width="@dimen/icon_medium"
+            android:layout_height="@dimen/icon_medium"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_shelter" />
+
+        <TextView
+            android:id="@+id/textTabCommunityShelters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="@string/tab_shelters"
+            android:textSize="@dimen/text_caption" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tabCommunityAlerts"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageTabCommunityAlerts"
+            android:layout_width="@dimen/icon_medium"
+            android:layout_height="@dimen/icon_medium"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_alert_bell" />
+
+        <TextView
+            android:id="@+id/textTabCommunityAlerts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="@string/tab_alerts"
+            android:textSize="@dimen/text_caption" />
+    </LinearLayout>
+
+</LinearLayout>

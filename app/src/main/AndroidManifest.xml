@@ -2,7 +2,31 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Alerts on Android 13+ and the walking route -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- Community alerts: offline check, alarm vibration, full-screen alert over the lock screen -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+    <!-- LR-06: listen to the village node by Bluetooth (no pairing, no location use on Android 12+) -->
+    <uses-permission
+        android:name="android.permission.BLUETOOTH"
+        android:maxSdkVersion="30" />
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_ADMIN"
+        android:maxSdkVersion="30" />
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_SCAN"
+        android:usesPermissionFlags="neverForLocation"
+        tools:targetApi="31" />
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="false" />
+
     <application
+        android:name=".CryonixApp"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -10,6 +34,221 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Cryonix" />
+        android:theme="@style/Theme.Cryonix">
+
+        <!-- A01 Splash screen: first screen when the app opens -->
+        <activity
+            android:name=".splash.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- A02 Onboarding screen -->
+        <activity
+            android:name=".onboarding.OnboardingActivity"
+            android:exported="false" />
+
+        <!-- A03 Choose role -->
+        <activity
+            android:name=".auth.ChooseRoleActivity"
+            android:exported="false" />
+
+        <!-- A04 Staff sign in -->
+        <activity
+            android:name=".auth.StaffSignInActivity"
+            android:exported="false" />
+
+        <!-- Forgot password -->
+        <activity
+            android:name=".auth.ForgotPasswordActivity"
+            android:exported="false" />
+
+        <!-- A05 Permissions -->
+        <activity
+            android:name=".signup.PermissionsActivity"
+            android:exported="false" />
+
+        <!-- A06 Choose village -->
+        <activity
+            android:name=".signup.ChooseVillageActivity"
+            android:exported="false" />
+
+        <!-- A07 Register phone -->
+        <activity
+            android:name=".signup.RegisterPhoneActivity"
+            android:exported="false" />
+
+        <!-- A08 Community home -->
+        <activity
+            android:name=".community.CommunityHomeActivity"
+            android:exported="false" />
+
+        <!-- A20 Staff home -->
+        <activity
+            android:name=".staff.StaffHomeActivity"
+            android:exported="false" />
+
+        <!-- A32 Users and roles (admin) -->
+        <activity
+            android:name=".admin.UsersRolesActivity"
+            android:exported="false" />
+
+        <!-- Organisations (admin) -->
+        <activity
+            android:name=".admin.OrganisationsActivity"
+            android:exported="false" />
+
+        <!-- Roles and permissions (admin) -->
+        <activity
+            android:name=".admin.RolePermissionsActivity"
+            android:exported="false" />
+
+        <!-- Audit log (admin) -->
+        <activity
+            android:name=".admin.AuditLogActivity"
+            android:exported="false" />
+
+        <!-- A34 Profile and settings -->
+        <activity
+            android:name=".profile.ProfileSettingsActivity"
+            android:exported="false" />
+
+        <!-- A31 More (staff menu) -->
+        <activity
+            android:name=".staff.StaffMoreActivity"
+            android:exported="false" />
+
+        <!-- A21 Lakes list -->
+        <activity
+            android:name=".lakes.LakesListActivity"
+            android:exported="false" />
+
+        <!-- A22 Lake detail -->
+        <activity
+            android:name=".lakes.LakeDetailActivity"
+            android:exported="false" />
+
+        <!-- A23 Review flagged lake -->
+        <activity
+            android:name=".lakes.ReviewLakeActivity"
+            android:exported="false" />
+
+        <!-- Alerts list -->
+        <activity
+            android:name=".alerts.AlertsListActivity"
+            android:exported="false" />
+
+        <!-- A27 Create alert -->
+        <activity
+            android:name=".alerts.CreateAlertActivity"
+            android:exported="false" />
+
+        <!-- A28 Alert delivery -->
+        <activity
+            android:name=".alerts.AlertDeliveryActivity"
+            android:exported="false" />
+
+        <!-- A33 Notifications -->
+        <activity
+            android:name=".notifications.NotificationsActivity"
+            android:exported="false" />
+
+        <!-- A09 Map of my village -->
+        <activity
+            android:name=".community.CommunityMapActivity"
+            android:exported="false" />
+
+        <!-- A10 Shelters near me -->
+        <activity
+            android:name=".community.SheltersActivity"
+            android:exported="false" />
+
+        <!-- A11 Shelter detail (A16 full redirect inside) -->
+        <activity
+            android:name=".community.ShelterDetailActivity"
+            android:exported="false" />
+
+        <!-- A12 Alerts history -->
+        <activity
+            android:name=".community.AlertsHistoryActivity"
+            android:exported="false" />
+
+        <!-- A13 Alert detail -->
+        <activity
+            android:name=".community.AlertDetailActivity"
+            android:exported="false" />
+
+        <!-- A15 My route -->
+        <activity
+            android:name=".community.RouteActivity"
+            android:exported="false" />
+
+        <!-- A18 Lake status -->
+        <activity
+            android:name=".community.LakeStatusActivity"
+            android:exported="false" />
+
+        <!-- A19 Safety guide -->
+        <activity
+            android:name=".community.SafetyGuideActivity"
+            android:exported="false" />
+
+        <!-- A35 Offline / no data -->
+        <activity
+            android:name=".community.OfflineNoDataActivity"
+            android:exported="false" />
+
+        <!-- A14 Full-screen alert: shows over the lock screen -->
+        <activity
+            android:name=".community.FullScreenAlertActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:showWhenLocked="true"
+            android:turnScreenOn="true"
+            tools:targetApi="27" />
+
+        <!-- A24 Flood scenarios of a lake -->
+        <activity
+            android:name=".flood.FloodScenarioActivity"
+            android:exported="false" />
+
+        <!-- A25 Evacuation time margin of houses -->
+        <activity
+            android:name=".evacuation.TimeMarginActivity"
+            android:exported="false" />
+
+        <!-- A26 Shelter management (admin, organisation staff) -->
+        <activity
+            android:name=".shelters.ShelterManageActivity"
+            android:exported="false" />
+
+        <!-- Add or edit a shelter -->
+        <activity
+            android:name=".shelters.ShelterEditActivity"
+            android:exported="false" />
+
+        <!-- A29 Network health and A30 Node detail (admin, officer) -->
+        <activity
+            android:name=".network.NetworkHealthActivity"
+            android:exported="false" />
+        <activity
+            android:name=".network.NodeDetailActivity"
+            android:exported="false" />
+
+        <!-- LR-06 Message from the village node (community) -->
+        <activity
+            android:name=".community.NodeMessageActivity"
+            android:exported="false" />
+
+        <!-- MN-01 Alert calls and SMS numbers (community) -->
+        <activity
+            android:name=".community.AlertCallsActivity"
+            android:exported="false" />
+
+    </application>
 
 </manifest>

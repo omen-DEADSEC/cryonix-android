@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A08 Community home: alert level of my village (CA-02), All clear (CA-07), quick links -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_page"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".community.CommunityHomeActivity">
+
+    <include layout="@layout/view_offline_banner" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/space_24">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/Cryonix.Text.Heading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/community_home_greeting" />
+
+                <TextView
+                    android:id="@+id/textCommunityHomeVillage"
+                    style="@style/Cryonix.Text.Chip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_8" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/buttonCommunityHomeSettings"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/community_home_settings_button"
+                android:src="@drawable/ic_settings"
+                app:tint="@color/color_text_primary" />
+        </LinearLayout>
+
+        <!-- Status card: alert, All clear or normal -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardCommunityHomeStatus"
+            style="@style/Cryonix.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_24">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/space_24">
+
+                <TextView
+                    android:id="@+id/textCommunityHomeLevel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_body"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textCommunityHomeStatusTitle"
+                    style="@style/Cryonix.Text.Heading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_16" />
+
+                <TextView
+                    android:id="@+id/textCommunityHomeWhatToDo"
+                    style="@style/Cryonix.Text.Body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_8"
+                    android:textSize="@dimen/text_body_large" />
+
+                <TextView
+                    android:id="@+id/textCommunityHomeSafePoint"
+                    style="@style/Cryonix.Text.Secondary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_8" />
+
+                <TextView
+                    android:id="@+id/textCommunityHomeUpdated"
+                    style="@style/Cryonix.Text.Caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_8" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonCommunityHomeRoute"
+                    style="@style/Cryonix.Button.Primary"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginTop="@dimen/space_16"
+                    android:text="@string/community_home_show_route"
+                    app:icon="@drawable/ic_route" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonCommunityHomeOpenAlert"
+                    style="@style/Cryonix.Button.Outlined"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginTop="@dimen/space_8"
+                    android:text="@string/community_home_open_alert"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Lake status and Safety guide rows (added in code) -->
+        <LinearLayout
+            android:id="@+id/layoutCommunityHomeLinks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_16"
+            android:orientation="vertical" />
+    </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/view_community_bottom_bar" />
+</LinearLayout>

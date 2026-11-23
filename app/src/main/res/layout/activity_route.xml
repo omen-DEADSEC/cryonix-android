@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A15 Walking route to my safe point (CA-04) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_page"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".community.RouteActivity">
+
+    <include layout="@layout/view_offline_banner" />
+
+    <include layout="@layout/view_top_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/space_24"
+            android:paddingEnd="@dimen/space_24"
+            android:paddingBottom="@dimen/space_24">
+
+            <TextView
+                android:id="@+id/textRouteTo"
+                style="@style/Cryonix.Text.Heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textRouteSummary"
+                style="@style/Cryonix.Text.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_4"
+                android:textSize="@dimen/text_body_large"
+                android:textStyle="bold" />
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Cryonix.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_16">
+
+                <com.example.cryonix.community.VillageMapView
+                    android:id="@+id/mapRoute"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                style="@style/Cryonix.Text.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_16"
+                android:background="@drawable/bg_message_error"
+                android:padding="@dimen/space_16"
+                android:text="@string/route_safe_note" />
+
+            <TextView
+                style="@style/Cryonix.Text.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_24"
+                android:text="@string/route_steps" />
+
+            <LinearLayout
+                android:id="@+id/layoutRouteSteps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <TextView
+                style="@style/Cryonix.Text.Caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_16"
+                android:text="@string/route_from_plan" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A13 Alert detail (community) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_page"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".community.AlertDetailActivity">
+
+    <include layout="@layout/view_offline_banner" />
+
+    <include layout="@layout/view_top_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/space_24"
+            android:paddingEnd="@dimen/space_24"
+            android:paddingBottom="@dimen/space_24">
+
+            <TextView
+                android:id="@+id/textAlertDetailLevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_body"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textAlertDetailMessage"
+                style="@style/Cryonix.Text.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_16"
+                android:lineSpacingExtra="4dp" />
+
+            <TextView
+                android:id="@+id/textAlertDetailLake"
+                style="@style/Cryonix.Text.Secondary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_16" />
+
+            <TextView
+                android:id="@+id/textAlertDetailTime"
+                style="@style/Cryonix.Text.Secondary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_4" />
+
+            <TextView
+                android:id="@+id/textAlertDetailStatus"
+                style="@style/Cryonix.Text.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_4"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonAlertDetailRoute"
+                style="@style/Cryonix.Button.Primary"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginTop="@dimen/space_24"
+                android:text="@string/community_home_show_route"
+                android:visibility="gone"
+                app:icon="@drawable/ic_route" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

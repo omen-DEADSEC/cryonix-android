@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A32 Users and roles (admin only): Requests tab + Users tab -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_page"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".admin.UsersRolesActivity">
+
+    <include layout="@layout/view_top_bar" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabUsersRoles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_16"
+        android:layout_marginEnd="@dimen/space_16"
+        android:background="@color/color_page"
+        app:tabIndicatorColor="@color/color_primary"
+        app:tabSelectedTextColor="@color/color_primary"
+        app:tabTextColor="@color/color_text_secondary" />
+
+    <TextView
+        android:id="@+id/textUsersRolesEmpty"
+        style="@style/Cryonix.Text.Secondary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/space_24"
+        android:text="@string/users_roles_no_requests"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/layoutUsersRolesList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/space_24"
+            android:paddingEnd="@dimen/space_24"
+            android:paddingBottom="@dimen/space_24" />
+    </ScrollView>
+
+</LinearLayout>

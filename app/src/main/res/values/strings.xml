@@ -1,3 +1,634 @@
 <resources>
     <string name="app_name">Cryonix</string>
+
+    <!-- A01 Splash screen -->
+    <string name="splash_title">Cryonix</string>
+    <string name="splash_tagline">Lake alerts and safe routes for your valley</string>
+    <string name="splash_logo_description">Cryonix logo</string>
+
+    <!-- A02 Onboarding screen (3 pages) -->
+    <string name="onboarding_page1_title">Alerts before the flood</string>
+    <string name="onboarding_page1_text">Cryonix watches the glacial lakes above your valley and warns you early, on loudspeakers, phone calls and this app.</string>
+    <string name="onboarding_page2_title">Know where to go</string>
+    <string name="onboarding_page2_text">When an alert comes, the app shows the nearest safe point and the walking route to it.</string>
+    <string name="onboarding_page3_title">Works without internet</string>
+    <string name="onboarding_page3_text">Your map, route and shelter are saved on the phone, so they still work when the network is down.</string>
+    <string name="onboarding_button_next">Next</string>
+    <string name="onboarding_button_get_started">Get started</string>
+    <string name="onboarding_button_skip">Skip</string>
+    <string name="onboarding_image_description">Onboarding picture</string>
+
+    <!-- Common texts -->
+    <string name="button_back">Back</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="button_save">Save</string>
+    <string name="button_continue">Continue</string>
+    <string name="button_sign_out">Sign out</string>
+    <string name="message_no_access">You do not have access to this screen.</string>
+    <string name="message_saved">Saved</string>
+    <string name="message_demo_data">Demo data: changes are kept until the app is closed.</string>
+
+    <!-- A03 Choose role -->
+    <string name="choose_role_title">Welcome to Cryonix</string>
+    <string name="choose_role_subtitle">How will you use the app?</string>
+    <string name="choose_role_community_title">I live in a valley</string>
+    <string name="choose_role_community_text">Get alerts for your village, your safe route and shelter.</string>
+    <string name="choose_role_staff_title">I work for an authority or organisation</string>
+    <string name="choose_role_staff_text">Sign in with the staff account given by your administrator.</string>
+    <string name="choose_role_footer">No staff account yet? Ask for one on the Cryonix website.</string>
+
+    <!-- A04 Staff sign in (AC-04) -->
+    <string name="staff_sign_in_title">Staff sign in</string>
+    <string name="staff_sign_in_subtitle">For authority officers, organisation staff and administrators.</string>
+    <string name="staff_sign_in_email_hint">Official email</string>
+    <string name="staff_sign_in_password_hint">Password</string>
+    <string name="staff_sign_in_button">Sign in</string>
+    <string name="staff_sign_in_forgot_password">Forgot password?</string>
+    <string name="staff_sign_in_error_empty">Enter your email and password.</string>
+    <string name="staff_sign_in_error_wrong">Email or password is not correct. %1$d tries left.</string>
+    <string name="staff_sign_in_error_locked">This account is locked after 5 wrong tries. Ask the system administrator to unlock it.</string>
+    <string name="staff_sign_in_error_switched_off">This account is switched off. Contact the system administrator.</string>
+
+    <!-- Forgot password (AC-05) -->
+    <string name="forgot_password_title">Reset password</string>
+    <string name="forgot_password_text">Enter the email of your staff account. We will send a reset link to that email only.</string>
+    <string name="forgot_password_button">Send reset link</string>
+    <string name="forgot_password_error_email">Enter a valid email.</string>
+    <string name="forgot_password_sent">If this email has a staff account, a reset link has been sent. The link works for 30 minutes and only once.</string>
+
+    <!-- A05 Permissions -->
+    <string name="permissions_title">Allow these so Cryonix can warn you</string>
+    <string name="permissions_notifications_title">Notifications</string>
+    <string name="permissions_notifications_text">To show alerts for your village, even when the phone is locked.</string>
+    <string name="permissions_location_title">Location</string>
+    <string name="permissions_location_text">To show your walking route. Your location stays on your phone and is never sent.</string>
+    <string name="permissions_button_allow">Allow</string>
+    <string name="permissions_button_not_now">Not now</string>
+
+    <!-- A06 Choose village -->
+    <string name="choose_village_title">Choose your village</string>
+    <string name="choose_village_text">Alerts and routes will be for this village. You can change it later in Settings.</string>
+    <string name="choose_village_search_hint">Search village</string>
+    <string name="choose_village_empty">No village found</string>
+
+    <!-- A07 Register phone (AC-03) -->
+    <string name="register_phone_title">Register your phone</string>
+    <string name="register_phone_text">We use your number only to send alerts, calls and SMS for your village.</string>
+    <string name="register_phone_hint">Mobile number (03XX XXXXXXX)</string>
+    <string name="register_phone_send_code">Send code</string>
+    <string name="register_phone_code_hint">6-digit code</string>
+    <string name="register_phone_code_sent">We sent a code to %1$s</string>
+    <string name="register_phone_verify">Verify and continue</string>
+    <string name="register_phone_resend_wait">Resend code in %1$d s</string>
+    <string name="register_phone_resend">Resend code</string>
+    <string name="register_phone_error_number">Enter a valid Pakistani mobile number, for example 0300 1234567.</string>
+    <string name="register_phone_error_code">The code is not correct.</string>
+    <string name="register_phone_demo_code">Demo code: 123456</string>
+
+    <!-- A08 Community home (first version) -->
+    <string name="community_home_greeting">Assalam o Alaikum</string>
+    <string name="community_home_village">Your village: %1$s</string>
+    <string name="community_home_coming">Alert level, map, route and shelters are added in the next sprint.</string>
+    <string name="community_home_settings">Settings and profile</string>
+
+    <!-- A20 Staff home (first version) -->
+    <string name="staff_home_greeting">Hello, %1$s</string>
+    <string name="staff_home_menu_title">What would you like to do?</string>
+    <string name="staff_home_coming">Lakes, alerts, shelters and reports are added in the next sprints.</string>
+    <string name="menu_users_roles">Users and roles</string>
+    <string name="menu_users_roles_text">Approve requests, change roles, switch accounts off</string>
+    <string name="menu_organisations">Organisations</string>
+    <string name="menu_organisations_text">Add organisations and link them to valleys</string>
+    <string name="menu_role_permissions">Roles and permissions</string>
+    <string name="menu_role_permissions_text">See what each role is allowed to do</string>
+    <string name="menu_audit_log">Audit log</string>
+    <string name="menu_audit_log_text">Sign-ins, role changes and other important actions</string>
+    <string name="menu_profile_settings">Profile and settings</string>
+    <string name="menu_profile_settings_text">Your details, password and notifications</string>
+
+    <!-- A32 Users and roles (AC-06, AC-07) -->
+    <string name="users_roles_title">Users and roles</string>
+    <string name="users_roles_tab_requests">Requests (%1$d)</string>
+    <string name="users_roles_tab_users">Users (%1$d)</string>
+    <string name="users_roles_no_requests">No requests are waiting.</string>
+    <string name="users_roles_requested_role">Asks for: %1$s</string>
+    <string name="users_roles_approve">Approve</string>
+    <string name="users_roles_reject">Reject</string>
+    <string name="users_roles_choose_role">Give a role</string>
+    <string name="users_roles_reject_question">Reject the request of %1$s?</string>
+    <string name="users_roles_approved">Account approved</string>
+    <string name="users_roles_rejected">Request rejected</string>
+    <string name="users_roles_status_active">Active</string>
+    <string name="users_roles_status_off">Switched off</string>
+    <string name="users_roles_status_locked">Locked</string>
+    <string name="users_roles_change_role">Change role</string>
+    <string name="users_roles_switch_off">Switch account off</string>
+    <string name="users_roles_switch_on">Switch account on</string>
+    <string name="users_roles_unlock">Unlock account</string>
+    <string name="users_roles_role_changed">Role changed. It takes effect at the next sign-in.</string>
+    <string name="users_roles_cannot_change_self">You cannot change your own account here.</string>
+
+    <!-- Organisations (AC-08) -->
+    <string name="organisations_title">Organisations</string>
+    <string name="organisations_add">Add organisation</string>
+    <string name="organisations_name_hint">Organisation name</string>
+    <string name="organisations_type_label">Type</string>
+    <string name="organisations_valleys_label">Valleys it works in</string>
+    <string name="organisations_error">Enter a name and choose at least one valley.</string>
+    <string name="organisations_added">Organisation added</string>
+    <string name="organisations_valleys">Valleys: %1$s</string>
+
+    <!-- Roles and permissions (AC-09) -->
+    <string name="role_permissions_title">Roles and permissions</string>
+    <string name="role_permissions_text">Each row is an action. A tick means the role is allowed to do it.</string>
+    <string name="role_permissions_action">Action</string>
+    <string name="role_permissions_admin">Admin</string>
+    <string name="role_permissions_officer">Officer</string>
+    <string name="role_permissions_staff">Staff</string>
+    <string name="role_permissions_community">Community</string>
+
+    <!-- Audit log (AC-10) -->
+    <string name="audit_log_title">Audit log</string>
+    <string name="audit_log_text">The log can be read but not changed. Newest first.</string>
+    <string name="audit_log_empty">Nothing recorded yet.</string>
+
+    <!-- A34 Profile and settings (AC-11) -->
+    <string name="profile_title">Profile and settings</string>
+    <string name="profile_details">Your details</string>
+    <string name="profile_name_hint">Full name</string>
+    <string name="profile_phone_hint">Phone</string>
+    <string name="profile_email">Email: %1$s</string>
+    <string name="profile_role">Role: %1$s</string>
+    <string name="profile_village">Village: %1$s</string>
+    <string name="profile_change_village">Change village</string>
+    <string name="profile_change_password">Change password</string>
+    <string name="profile_current_password_hint">Current password</string>
+    <string name="profile_new_password_hint">New password (at least 8 characters)</string>
+    <string name="profile_password_changed">Password changed</string>
+    <string name="profile_password_error">Current password is wrong or the new one is too short.</string>
+    <string name="profile_notifications">Notifications</string>
+    <string name="profile_notify_alerts">Alerts for my village</string>
+    <string name="profile_notify_alerts_text">Always on, so you never miss a warning.</string>
+    <string name="profile_notify_lake_summary">Daily lake summary</string>
+    <string name="profile_notify_node_health">Silent node and flagged lake notices</string>
+    <string name="profile_notify_email">Also send notices by email</string>
+    <string name="profile_name_error">Enter your name.</string>
+
+    <string-array name="organisation_types">
+        <item>Government authority</item>
+        <item>NGO</item>
+        <item>Community group</item>
+        <item>Research body</item>
+    </string-array>
+    <!-- ===================== Epic: Dashboard, Staff App and Reports ===================== -->
+
+    <!-- Staff bottom bar -->
+    <string name="tab_home">Home</string>
+    <string name="tab_lakes">Lakes</string>
+    <string name="tab_alerts">Alerts</string>
+    <string name="tab_more">More</string>
+
+    <!-- A20 Staff home (overview, DR-01 key numbers in the app) -->
+    <string name="staff_home_overview">Overview</string>
+    <string name="staff_home_theme_button">Switch light or dark theme</string>
+    <string name="staff_home_bell_button">Notifications</string>
+    <string name="staff_home_tile_lakes">Lakes on Watch or Warning</string>
+    <string name="staff_home_tile_lakes_sub">of %1$d lakes</string>
+    <string name="staff_home_tile_alerts">Active alerts</string>
+    <string name="staff_home_tile_alerts_sub">Tap to see delivery</string>
+    <string name="staff_home_tile_nodes">Silent nodes</string>
+    <string name="staff_home_tile_nodes_sub">of %1$d village nodes</string>
+    <string name="staff_home_tile_people">People at risk</string>
+    <string name="staff_home_tile_people_sub">below Watch and Warning lakes</string>
+    <string name="staff_home_levels_title">Lakes by level</string>
+    <string name="staff_home_review_title">Lakes to review</string>
+    <string name="staff_home_no_review">No lake is waiting for review.</string>
+    <string name="staff_home_people_coming">The exposure page comes with the Exposure Analysis epic.</string>
+    <string name="staff_home_nodes_all_ok">All village nodes are online.</string>
+    <string name="staff_home_valleys_note">You see only the valleys of your organisation: %1$s</string>
+
+    <!-- Node dialog -->
+    <string name="node_title">Node %1$s</string>
+    <string name="node_details">Village: %1$s (%2$s)\nLast message: %3$s\nBattery: %4$d%%\nStatus: %5$s</string>
+    <string name="node_online">Online</string>
+    <string name="node_silent">Silent</string>
+    <string name="node_more_coming">The full Network health screen comes with the LoRa Mesh Channel epic.</string>
+
+    <!-- A31 More -->
+    <string name="more_title">More</string>
+    <string name="menu_notifications">Notifications</string>
+    <string name="menu_notifications_text">Flagged lakes, silent nodes and sent alerts</string>
+
+    <!-- A21 Lakes list -->
+    <string name="lakes_title">Lakes</string>
+    <string name="lakes_search_hint">Search lake or valley</string>
+    <string name="lakes_filter_all">All</string>
+    <string name="lakes_empty">No lake matches.</string>
+    <string name="lakes_row_details">%1$s valley  •  %2$s ha  •  %3$s in 30 days</string>
+    <string name="lakes_flagged">Needs review</string>
+
+    <!-- A22 Lake detail -->
+    <string name="lake_detail_title">Lake detail</string>
+    <string name="lake_detail_area">Area</string>
+    <string name="lake_detail_change">Change in 30 days</string>
+    <string name="lake_detail_elevation">Elevation</string>
+    <string name="lake_detail_place">Valley and district</string>
+    <string name="lake_detail_image">Last satellite image</string>
+    <string name="lake_detail_villages">Villages downstream</string>
+    <string name="lake_detail_flag_title">Flagged by the lake model</string>
+    <string name="lake_detail_confidence">Model confidence: %1$d%%</string>
+    <string name="lake_detail_last_review">Last review note: %1$s</string>
+    <string name="lake_detail_review">Review flag</string>
+    <string name="lake_detail_create_alert">Create alert for this lake</string>
+    <string name="lake_detail_not_found">This lake is not in your list.</string>
+
+    <!-- A23 Review flagged lake -->
+    <string name="review_title">Review flagged lake</string>
+    <string name="review_question">What do you decide?</string>
+    <string name="review_confirm">Confirm the flag and change the level</string>
+    <string name="review_keep">Keep the current level and watch</string>
+    <string name="review_dismiss">Reject the flag (model mistake)</string>
+    <string name="review_new_level">New level</string>
+    <string name="review_note_hint">Note for the record (why?)</string>
+    <string name="review_save">Save review</string>
+    <string name="review_error_choice">Choose one decision.</string>
+    <string name="review_error_note">Write a short note (at least 10 letters).</string>
+    <string name="review_saved">Review saved</string>
+    <string name="review_send_alert_question">%1$s is now on %2$s. Create an alert for the villages below it?</string>
+    <string name="review_send_alert_yes">Create alert</string>
+    <string name="review_send_alert_later">Later</string>
+    <string name="review_not_flagged">This lake is not flagged any more.</string>
+
+    <!-- Alerts list -->
+    <string name="alerts_title">Alerts</string>
+    <string name="alerts_create">Create alert</string>
+    <string name="alerts_active">Active</string>
+    <string name="alerts_past">Past</string>
+    <string name="alerts_none_active">No active alert.</string>
+    <string name="alerts_none_past">No past alert.</string>
+    <string name="alerts_row_details">%1$d villages  •  %2$s  •  by %3$s</string>
+    <string name="alerts_status_active">Active</string>
+    <string name="alerts_status_cancelled">Cancelled</string>
+
+    <!-- A27 Create alert -->
+    <string name="create_alert_title">Create alert</string>
+    <string name="create_alert_lake">Lake</string>
+    <string name="create_alert_level">Level</string>
+    <string name="create_alert_villages">Villages to warn</string>
+    <string name="create_alert_channels">Send by</string>
+    <string name="create_alert_message_hint">Message people will hear and read</string>
+    <string name="create_alert_send">Send alert</string>
+    <string name="create_alert_error_villages">Choose at least one village.</string>
+    <string name="create_alert_error_channels">Choose at least one channel.</string>
+    <string name="create_alert_error_message">Write the message.</string>
+    <string name="create_alert_error_level">Choose a level.</string>
+    <string name="create_alert_no_lakes">There is no lake you can send an alert for.</string>
+    <string name="create_alert_confirm">Send a %1$s alert for %2$s to %3$d villages by %4$d channels?</string>
+    <string name="create_alert_sent">Alert sent</string>
+    <string name="create_alert_two_person_note">Two-person approval for Warning alerts comes with the Alert Management epic.</string>
+    <string name="alert_template_advisory">ADVISORY: %1$s is being watched. No action is needed now. Listen for updates.</string>
+    <string name="alert_template_watch">WATCH: %1$s is rising. Keep your bag ready and listen to the mosque speaker.</string>
+    <string name="alert_template_warning">WARNING: %1$s may burst. Leave now by your route to the shelter. Help elders and children.</string>
+    <string name="alert_template_all_clear">ALL CLEAR: The danger from %1$s is over. You can go home safely.</string>
+
+    <!-- A28 Alert delivery -->
+    <string name="delivery_title">Alert delivery</string>
+    <string name="delivery_sent_by">Sent %1$s by %2$s</string>
+    <string name="delivery_channels">Delivery by channel</string>
+    <string name="delivery_channel_numbers">Sent %1$d of %2$d  •  delivered %3$d</string>
+    <string name="delivery_villages">Village confirmations (%1$d of %2$d)</string>
+    <string name="delivery_confirmed">Confirmed</string>
+    <string name="delivery_waiting">Waiting…</string>
+    <string name="delivery_not_confirmed">No confirmation after 2 minutes. Call the focal person.</string>
+    <string name="delivery_cancel">Cancel alert</string>
+    <string name="delivery_cancel_reason_hint">Reason for cancelling</string>
+    <string name="delivery_cancel_error">Write the reason.</string>
+    <string name="delivery_cancelled">Alert cancelled</string>
+    <string name="delivery_cancelled_note">Cancelled: %1$s</string>
+    <string name="delivery_not_found">This alert is not in your list.</string>
+
+    <!-- A33 Notifications (DR-04) -->
+    <string name="notifications_title">Notifications</string>
+    <string name="notifications_mark_all">Mark all as read</string>
+    <string name="notifications_empty">No notifications.</string>
+    <string name="notification_channel_name">Staff notices</string>
+    <string name="notification_channel_text">Flagged lakes, silent nodes and alerts for your valleys</string>
+    <string name="notification_unread_title">Cryonix: %1$d unread notices</string>
+
+    <!-- Theme (DR-06) -->
+    <string name="profile_appearance">Appearance</string>
+    <string name="profile_theme">Theme: %1$s</string>
+    <string name="profile_theme_choose">Choose theme</string>
+    <string-array name="theme_choices">
+        <item>Same as phone</item>
+        <item>Light</item>
+        <item>Dark</item>
+    </string-array>
+
+    <!-- ===================== Epic: Community Mobile App ===================== -->
+
+    <!-- Community bottom bar -->
+    <string name="tab_map">Map</string>
+    <string name="tab_shelters">Shelters</string>
+
+    <!-- Offline (CA-05) -->
+    <string name="offline_banner">Offline. Showing data saved on %1$s</string>
+    <string name="offline_no_data_title">No village data yet</string>
+    <string name="offline_no_data_text">Connect to the internet once so Cryonix can save the map, route and shelters of your village on this phone.</string>
+    <string name="offline_try_again">Try again</string>
+
+    <!-- A08 Community home (CA-02, CA-07) -->
+    <string name="community_home_settings_button">Settings and profile</string>
+    <string name="community_home_updated">Last update: %1$s</string>
+    <string name="community_home_no_alert_title">No alert for your village</string>
+    <string name="community_home_no_alert_text">Life as normal. Keep your ready bag packed and know your route.</string>
+    <string name="community_home_show_route">Show my route</string>
+    <string name="community_home_open_alert">Open alert</string>
+    <string name="community_home_safe_point">Your safe point: %1$s (%2$d min walk)</string>
+    <string name="community_home_all_clear_title">All clear</string>
+    <string name="community_home_all_clear_text">The danger is over. You can go home safely. Thank you for moving quickly.</string>
+    <string name="community_home_lake_link">Lake above my village</string>
+    <string name="community_home_guide_link">Safety guide</string>
+    <string name="what_to_do_advisory">Nothing to do now. Listen for updates.</string>
+    <string name="what_to_do_watch">Keep your bag ready. Be ready to leave.</string>
+    <string name="what_to_do_warning">Leave now. Walk to your safe point.</string>
+
+    <!-- A09 Map -->
+    <string name="map_title">Map of my village</string>
+    <string name="map_label_village">Your village</string>
+    <string name="map_legend_flood">Flood zone</string>
+    <string name="map_legend_shelter">Shelter with room</string>
+    <string name="map_legend_full">Shelter full</string>
+    <string name="map_legend_route">Your route</string>
+    <string name="map_hint">Tap a shelter on the map to see it.</string>
+    <string name="map_note">Simple map saved on your phone. The full map comes with the real map data.</string>
+
+    <!-- A10 / A11 Shelters (CA-06) -->
+    <string name="shelters_title">Shelters near me</string>
+    <string name="shelters_row_details">%1$s  •  %2$d min walk</string>
+    <string name="shelters_free">%1$d free of %2$d</string>
+    <string name="shelters_full">Full</string>
+    <string name="shelter_detail_title">Shelter</string>
+    <string name="shelter_detail_distance">Distance</string>
+    <string name="shelter_detail_walk">Walking time</string>
+    <string name="shelter_detail_capacity">Places</string>
+    <string name="shelter_detail_inside">People inside</string>
+    <string name="shelter_detail_free">Free places</string>
+    <string name="shelter_detail_facilities">Facilities</string>
+    <string name="shelter_detail_route">Show route to this shelter</string>
+    <string name="minutes_value">%1$d min</string>
+    <!-- A16 Shelter full redirect -->
+    <string name="shelter_full_title">This shelter is full</string>
+    <string name="shelter_full_text">Go to %1$s instead. It has %2$d free places and is %3$s away.</string>
+    <string name="shelter_full_go">Go there</string>
+    <string name="shelter_full_none">All shelters are full. Follow the volunteers and listen to the mosque speaker.</string>
+
+    <!-- A15 Route (CA-04) -->
+    <string name="route_title">My route</string>
+    <string name="route_to">To %1$s</string>
+    <string name="route_summary">%1$s  •  about %2$d min walking</string>
+    <string name="route_steps">Steps</string>
+    <string name="route_safe_note">This route stays outside the flood zone (red on the map). Do not take a short cut by the river.</string>
+    <string name="route_from_plan">Route from the approved evacuation plan of your village.</string>
+
+    <!-- A12 / A13 Alert history (CA-10) -->
+    <string name="history_title">Alerts for my village</string>
+    <string name="history_empty">No alert has been sent to your village.</string>
+    <string name="history_status_active">Active now</string>
+    <string name="history_status_ended">Ended</string>
+    <string name="alert_detail_title">Alert</string>
+    <string name="alert_detail_time">Sent %1$s</string>
+    <string name="alert_detail_lake">About: %1$s</string>
+    <string name="alert_detail_not_found">This alert is not saved on your phone.</string>
+
+    <!-- A14 Full-screen alert (CA-03) -->
+    <string name="full_alert_safe_point">Your safe point</string>
+    <string name="full_alert_route">Show my route</string>
+    <string name="full_alert_stop">I have seen it. Stop the sound.</string>
+    <string name="full_alert_tap_hint">Tap anywhere to stop the sound</string>
+    <string name="full_alert_practice">PRACTICE ONLY. This is not a real alert.</string>
+    <string name="community_channel_name">Village alerts</string>
+    <string name="community_channel_text">Watch and Warning alerts for your village, with alarm sound</string>
+    <string name="community_notification_title">%1$s: %2$s</string>
+    <string name="community_notification_text">Your safe point: %1$s. Open for your route.</string>
+
+    <!-- A18 Lake status (CA-08) -->
+    <string name="lake_status_title">Lake above my village</string>
+    <string name="lake_status_checked">Last checked: %1$s</string>
+    <string name="lake_status_none">There is no watched lake above your village.</string>
+    <string name="lake_status_baseline">The lake is normal. Nothing to worry about.</string>
+    <string name="lake_status_advisory">The lake is a little higher than usual. Experts are watching it.</string>
+    <string name="lake_status_watch">The lake is rising. Keep your bag ready and listen for alerts.</string>
+    <string name="lake_status_warning">The lake is dangerous. Follow the alert and go to your safe point.</string>
+    <string name="lake_status_note">Cryonix checks the lake from satellite pictures and village sensors.</string>
+
+    <!-- A19 Safety guide (CA-09) -->
+    <string name="guide_title">Safety guide</string>
+    <string name="guide_intro">Read this now, before any danger. It works without internet.</string>
+    <string name="guide_step1_title">1. Keep a ready bag</string>
+    <string name="guide_step1_text">Water, dry food, medicines, ID cards, a torch, warm clothes and a phone charger.</string>
+    <string name="guide_step2_title">2. Know your route</string>
+    <string name="guide_step2_text">Walk your route to the safe point once with your family, in daylight.</string>
+    <string name="guide_step3_title">3. Listen for the alert</string>
+    <string name="guide_step3_text">Alerts come on the mosque speaker, by phone call and in this app.</string>
+    <string name="guide_step4_title">4. Go uphill, away from the river</string>
+    <string name="guide_step4_text">Never walk along the river or cross a bridge during a Warning. Do not stop to take things.</string>
+    <string name="guide_step5_title">5. Help others</string>
+    <string name="guide_step5_text">Take children, elders and people who cannot walk fast. Tell your neighbours.</string>
+    <string name="guide_step6_title">6. Wait for All clear</string>
+    <string name="guide_step6_text">Stay at the safe point until you get the All clear message.</string>
+    <string name="guide_practice">Practise the alert screen</string>
+
+    <!-- CA-01 choose village by location -->
+    <string name="choose_village_use_location">Use my location</string>
+    <string name="choose_village_location_found">Nearest village: %1$s</string>
+    <string name="choose_village_location_none">No village found near you. Please choose from the list.</string>
+    <string name="choose_village_location_permission">Allow location to find your village, or choose from the list.</string>
+
+    <!-- ===================== Epic: Lake Monitoring (app parts) ===================== -->
+    <!-- LM-04 list and map -->
+    <string name="lakes_view_list">List</string>
+    <string name="lakes_view_map">Map</string>
+    <string name="lakes_district">District</string>
+    <string name="lakes_size">Size</string>
+    <string name="lakes_sort">Sort by</string>
+    <string name="lakes_row_updated">%1$s  •  updated %2$s</string>
+    <string name="lakes_map_hint">Tap a dot to open the lake. Bigger dots are flagged lakes.</string>
+    <string name="lakes_map_ghizer">GHIZER</string>
+    <string name="lakes_map_chitral">CHITRAL</string>
+    <string-array name="lakes_district_choices">
+        <item>All districts</item>
+        <item>Ghizer</item>
+        <item>Chitral</item>
+    </string-array>
+    <string-array name="lakes_size_choices">
+        <item>Any size</item>
+        <item>Under 5 ha</item>
+        <item>5 to 10 ha</item>
+        <item>Over 10 ha</item>
+    </string-array>
+    <string-array name="lakes_sort_choices">
+        <item>Level (most serious first)</item>
+        <item>Area (largest first)</item>
+        <item>Change in 30 days</item>
+        <item>Name</item>
+    </string-array>
+
+    <!-- LM-05 lake detail -->
+    <string name="lake_detail_history">Area in the last 12 months (ha)</string>
+    <string name="lake_chart_max">Past maximum %1$s ha</string>
+    <string name="lake_detail_images">Latest images</string>
+    <string name="lake_detail_image_previous">%1$s  •  %2$s ha</string>
+    <string name="lake_detail_image_latest">%1$s  •  %2$s ha</string>
+    <string name="lake_detail_images_note">Yellow line: lake outline from the model. White dashed line: previous outline.</string>
+    <string name="lake_detail_notes">Notes</string>
+    <string name="lake_detail_glacier">Glacier</string>
+    <string name="lake_detail_slope">Slopes</string>
+    <string name="lake_detail_dam">Dam</string>
+    <string name="lake_detail_review_record">Last review: %1$s by %2$s, %3$s</string>
+    <string name="lake_detail_review_note">Note: %1$s</string>
+
+    <!-- LM-07 review -->
+    <string name="review_image_title">Latest image and model outline</string>
+    <string name="review_reject">Reject the flag (model mistake)</string>
+    <string name="review_saved_by">Saved by %1$s at %2$s</string>
+
+    <!-- ===================== Epic: Flood Scenarios (app parts) ===================== -->
+    <string name="flood_title">Flood scenarios</string>
+    <string name="flood_small">Small</string>
+    <string name="flood_medium">Medium</string>
+    <string name="flood_worst">Worst case</string>
+    <string name="flood_release">Water released</string>
+    <string name="flood_peak">Peak flow</string>
+    <string name="flood_model">Model used</string>
+    <string name="flood_run_date">Model run on</string>
+    <string name="flood_arrival_title">Flood arrival time at each village</string>
+    <string name="flood_arrival_range">%1$d–%2$d min</string>
+    <string name="flood_arrival_details">%1$s km down the river  •  %2$s people</string>
+    <string name="flood_band_1">&lt; 30 min</string>
+    <string name="flood_band_2">30–60</string>
+    <string name="flood_band_3">60–120</string>
+    <string name="flood_band_4">&gt; 120</string>
+    <string name="flood_estimate_note">These times are model estimates, not exact. Plan with the earliest time of each range.</string>
+    <string name="lake_detail_flood">Flood scenarios</string>
+
+    <!-- ===================== Epic: Evacuation Planning (app parts) ===================== -->
+    <string name="margin_title">Time to reach safety</string>
+    <string name="margin_open">Time to reach safety (houses)</string>
+    <string name="margin_scenario_note">Worst-case flood scenario.</string>
+    <string name="margin_formula">Time margin = flood arrival − (detection + alert + get ready + walking)</string>
+    <string name="margin_part_detection">Detection: %1$d min</string>
+    <string name="margin_part_alert">Alert reaches the village: %1$d min</string>
+    <string name="margin_part_ready">Getting ready: %1$d min</string>
+    <string name="margin_part_walk">Walking: from each house to its safe point</string>
+    <string name="margin_arrival">Flood arrives in %1$d min  •  %2$d houses</string>
+    <string name="margin_enough">Enough %1$d</string>
+    <string name="margin_tight">Tight %1$d</string>
+    <string name="margin_none">No time %1$d</string>
+    <string name="margin_totals">All villages: %1$d enough, %2$d tight, %3$d no time</string>
+    <string name="margin_help_note">Red houses cannot reach safety in time on their own. Plan help for them first: closer safe points, vehicles or volunteers. Green: 10 min or more to spare. Yellow: 0 to 9 min.</string>
+
+    <!-- ===================== Epic: Shelter Management and Occupancy (app parts) ===================== -->
+    <string name="menu_shelters">Shelters</string>
+    <string name="menu_shelters_text">Add shelters and see how full they are</string>
+    <string name="shelter_manage_title">Shelters</string>
+    <string name="shelter_manage_add">Add shelter</string>
+    <string name="shelter_manage_row">%1$s  •  %2$s</string>
+    <string name="shelter_manage_count">%1$d of %2$d inside (%3$d%%)</string>
+    <string name="shelter_manage_updated">Counter: %1$s</string>
+    <string name="shelter_manage_live">Live counts refresh every 5 seconds (demo counter).</string>
+    <string name="shelter_manage_flood_tag">In flood zone</string>
+    <string name="shelter_edit_title_add">Add shelter</string>
+    <string name="shelter_edit_title_edit">Edit shelter</string>
+    <string name="shelter_edit_name">Shelter name</string>
+    <string name="shelter_edit_village">Village</string>
+    <string name="shelter_edit_type">Type</string>
+    <string name="shelter_edit_area">Covered floor area (m²)</string>
+    <string name="shelter_edit_height">Height above the river (m)</string>
+    <string name="shelter_edit_contact">Contact person</string>
+    <string name="shelter_edit_phone">Contact phone</string>
+    <string name="shelter_edit_capacity">Capacity: %1$d people (4.5 m² per person)</string>
+    <string name="shelter_edit_flood_warning">Warning: this shelter is less than 20 m above the river, so it may be inside the flood zone. Choose a higher place if you can.</string>
+    <string name="shelter_edit_error">Enter the name, floor area and height.</string>
+    <string name="shelter_edit_saved">Shelter saved</string>
+    <string name="shelter_edit_live_title">Live count</string>
+    <string name="shelter_edit_in">People in</string>
+    <string name="shelter_edit_out">People out</string>
+    <string name="shelter_edit_present">Inside now</string>
+    <string name="shelter_edit_last">Last update</string>
+    <string-array name="shelter_types">
+        <item>School</item>
+        <item>Community hall</item>
+        <item>Mosque</item>
+        <item>Health centre</item>
+        <item>Tent camp</item>
+        <item>Other</item>
+    </string-array>
+
+    <!-- ===================== Epic: Alert Management (app parts) ===================== -->
+    <string name="create_alert_preview_title">Check before sending</string>
+    <string name="create_alert_preview">Level: %1$s\nLake: %2$s\nVillages: %3$s\nAbout %4$s people\nChannels: %5$s\n\nMessage:\n%6$s</string>
+    <string name="create_alert_preview_people">About %1$s people in the chosen villages</string>
+    <string name="delivery_all_clear">Send All clear</string>
+    <string name="delivery_all_clear_preview">The All clear goes to the same %1$d villages (about %2$s people) on the same %3$d channels:\n\n%4$s</string>
+    <string name="delivery_all_clear_sent">All clear sent. The first alert is closed.</string>
+    <string name="delivery_closed_note">Closed %1$s by %2$s: %3$s</string>
+
+    <!-- ===================== Epic: LoRa Mesh Channel (app parts) ===================== -->
+    <string name="menu_network">Network health</string>
+    <string name="menu_network_text">Battery, signal and last report of every village node</string>
+    <string name="network_title">Network health</string>
+    <string name="network_summary">%1$d online  •  %2$d silent  •  %3$d low battery</string>
+    <string name="network_rule">Each node reports every %1$d minutes. A node that misses %2$d reports is marked silent and the administrator is told.</string>
+    <string name="network_row_details">%1$s  •  battery %2$d%%  •  signal %3$s (%4$d dBm)</string>
+    <string name="network_row_last">Last report: %1$s</string>
+    <string name="network_silent_tag">Silent</string>
+    <string name="network_low_tag">Low battery</string>
+    <string name="node_detail_title">Node</string>
+    <string name="node_detail_position">Position</string>
+    <string name="node_detail_village">Village</string>
+    <string name="node_detail_status">Status</string>
+    <string name="node_detail_missed">Missed reports</string>
+    <string name="node_detail_battery_chart">Battery in the last 24 hours (%)</string>
+    <string name="node_detail_signal_chart">Signal in the last 24 hours (dBm)</string>
+    <string name="node_detail_messages">Last messages</string>
+    <string name="node_detail_repair">Plan a visit: check the solar panel, battery and antenna.</string>
+
+    <!-- LR-06 alert text from the village node, no internet -->
+    <string name="node_message_link">Message from the village node</string>
+    <string name="node_message_title">Message from the village node</string>
+    <string name="node_message_text">If there is no internet, the node in your village can still send the alert text to phones near it. No pairing is needed.</string>
+    <string name="node_message_scan">Look for the node (Bluetooth)</string>
+    <string name="node_message_scanning">Looking for the village node… (20 seconds)</string>
+    <string name="node_message_not_found">No village node found nearby. Go closer to the mosque or try the Wi-Fi page.</string>
+    <string name="node_message_bt_off">Turn on Bluetooth to look for the node.</string>
+    <string name="node_message_permission">Allow "Nearby devices" so the app can hear the node.</string>
+    <string name="node_message_wifi">Open the node Wi-Fi page</string>
+    <string name="node_message_wifi_help">Or: connect your Wi-Fi to the network named CRYONIX-NODE (no password), then tap the button above.</string>
+    <string name="node_message_sample">Show a sample message (test)</string>
+    <string name="node_message_received">Received from the node at %1$s</string>
+
+    <!-- ===================== Epic: Mobile Network Channel (app parts) ===================== -->
+    <string name="calls_title">Alert calls and SMS</string>
+    <string name="calls_open">Alert calls and SMS</string>
+    <string name="calls_intro">These numbers get a voice call and an SMS when there is an alert for their village. Any phone works, also a simple phone without internet.</string>
+    <string name="calls_owner_me">Me</string>
+    <string name="calls_row">%1$s  •  %2$s</string>
+    <string name="calls_row_added">Village: %1$s  •  added %2$s</string>
+    <string name="calls_remove">Remove</string>
+    <string name="calls_remove_question">Stop alert calls and SMS to %1$s?</string>
+    <string name="calls_removed">Number removed. It will not get alert calls any more.</string>
+    <string name="calls_none">No number gets alert calls yet.</string>
+    <string name="calls_add_title">Add a number for a family member</string>
+    <string name="calls_add_text">For example a parent with a simple phone. The number is linked to your village: %1$s.</string>
+    <string name="calls_name_hint">Name (for example Father)</string>
+    <string name="calls_number_hint">Mobile number (03XX XXXXXXX)</string>
+    <string name="calls_send_code">Send code to this number</string>
+    <string name="calls_code_text">We sent a code by SMS to %1$s. Ask the person for the code. Demo code: 123456</string>
+    <string name="calls_code_hint">6-digit code</string>
+    <string name="calls_verify">Confirm and add</string>
+    <string name="calls_added">Number added for alert calls</string>
+    <string name="calls_error_name">Enter a name.</string>
+    <string name="calls_my_number_removed_note">Your own number is removed, so you will only get alerts in the app.</string>
+    <string name="calls_add_mine">Get alert calls on my number again</string>
 </resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- One village on the delivery screen: name + confirmation status -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/space_8"
+    android:background="@drawable/bg_list_row"
+    android:orientation="vertical"
+    android:padding="@dimen/space_16">
+
+    <TextView
+        android:id="@+id/textVillageConfirmName"
+        style="@style/Cryonix.Text.Body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textVillageConfirmStatus"
+        style="@style/Cryonix.Text.Caption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_4" />
+</LinearLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A01 Splash screen: logo, app name and tagline in the centre -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutSplashRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_page"
+    android:fitsSystemWindows="true"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/space_24"
+    tools:context=".splash.SplashActivity">
+
+    <!-- Logo box -->
+    <FrameLayout
+        android:id="@+id/layoutSplashLogo"
+        android:layout_width="@dimen/splash_logo_size"
+        android:layout_height="@dimen/splash_logo_size"
+        android:background="@drawable/bg_splash_logo">
+
+        <ImageView
+            android:id="@+id/imageSplashLogo"
+            android:layout_width="@dimen/splash_logo_icon_size"
+            android:layout_height="@dimen/splash_logo_icon_size"
+            android:layout_gravity="center"
+            android:contentDescription="@string/splash_logo_description"
+            android:src="@drawable/ic_cryonix_logo" />
+    </FrameLayout>
+
+    <!-- App name -->
+    <TextView
+        android:id="@+id/textSplashTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_16"
+        android:fontFamily="sans-serif"
+        android:text="@string/splash_title"
+        android:textColor="@color/color_text_primary"
+        android:textSize="@dimen/text_display"
+        android:textStyle="bold" />
+
+    <!-- Tagline -->
+    <TextView
+        android:id="@+id/textSplashTagline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_8"
+        android:gravity="center"
+        android:text="@string/splash_tagline"
+        android:textColor="@color/color_text_secondary"
+        android:textSize="@dimen/text_body" />
+
+</LinearLayout>

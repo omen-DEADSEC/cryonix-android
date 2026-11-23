@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- One notification: icon, title, text, time, unread dot -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/space_8"
+    android:background="@drawable/bg_list_row"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="horizontal"
+    android:padding="@dimen/space_16">
+
+    <FrameLayout
+        android:layout_width="@dimen/icon_circle_size"
+        android:layout_height="@dimen/icon_circle_size"
+        android:background="@drawable/bg_icon_circle">
+
+        <ImageView
+            android:id="@+id/imageNoticeIcon"
+            android:layout_width="@dimen/icon_medium"
+            android:layout_height="@dimen/icon_medium"
+            android:layout_gravity="center"
+            android:importantForAccessibility="no"
+            app:tint="@color/color_primary" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_16"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textNoticeTitle"
+            style="@style/Cryonix.Text.Body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/textNoticeText"
+            style="@style/Cryonix.Text.Secondary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp" />
+
+        <TextView
+            android:id="@+id/textNoticeTime"
+            style="@style/Cryonix.Text.Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_4" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewNoticeUnreadDot"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_marginStart="@dimen/space_8"
+        android:layout_marginTop="@dimen/space_4"
+        android:background="@drawable/bg_unread_dot" />
+</LinearLayout>

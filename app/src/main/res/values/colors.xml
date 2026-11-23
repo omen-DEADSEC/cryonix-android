@@ -1,10 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- Cryonix colours (light theme). Taken from the Figma design system. -->
+    <!-- The dark theme uses the same names in values-night/colors.xml -->
+
+    <!-- Brand -->
+    <color name="color_primary">#0B5C8A</color>
+    <color name="color_on_primary">#FFFFFF</color>
+
+    <!-- Backgrounds -->
+    <color name="color_page">#F8FAFC</color>
+    <color name="color_surface">#FFFFFF</color>
+
+    <!-- Soft brand colour (behind illustrations) and page dots -->
+    <color name="color_primary_soft">#E0F2FE</color>
+    <color name="color_dot_inactive">#CBD5E1</color>
+
+    <!-- Lines, errors, success -->
+    <color name="color_border">#E2E8F0</color>
+    <color name="color_error">#DC2626</color>
+    <color name="color_success">#16A34A</color>
+    <color name="color_error_soft">#FEE2E2</color>
+    <color name="color_success_soft">#DCFCE7</color>
+
+    <!-- Text -->
+    <color name="color_text_primary">#0F172A</color>
+    <color name="color_text_secondary">#475569</color>
+
+    <!-- Alert levels (always shown with an icon and a label too) -->
+    <color name="color_level_baseline">#64748B</color>
+    <color name="color_level_advisory">#EAB308</color>
+    <color name="color_level_watch">#F97316</color>
+    <color name="color_level_warning">#DC2626</color>
+    <color name="color_level_all_clear">#16A34A</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
 </resources>

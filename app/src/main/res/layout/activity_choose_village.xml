@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A06 Choose village: search + list -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_page"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".signup.ChooseVillageActivity">
+
+    <include layout="@layout/view_top_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/space_24"
+        android:paddingEnd="@dimen/space_24">
+
+        <TextView
+            style="@style/Cryonix.Text.Secondary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/choose_village_text" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Cryonix.TextInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_16"
+            android:hint="@string/choose_village_search_hint"
+            app:startIconDrawable="@drawable/ic_search">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editChooseVillageSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- CA-01: pick the village by location -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonChooseVillageLocation"
+            style="@style/Cryonix.Button.Outlined"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginTop="@dimen/space_8"
+            android:text="@string/choose_village_use_location"
+            app:icon="@drawable/ic_gps" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/layoutChooseVillageList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/space_24"
+            android:paddingTop="@dimen/space_8"
+            android:paddingEnd="@dimen/space_24"
+            android:paddingBottom="@dimen/space_8" />
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/textChooseVillageEmpty"
+        style="@style/Cryonix.Text.Secondary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/space_16"
+        android:text="@string/choose_village_empty"
+        android:visibility="gone" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonChooseVillageContinue"
+        style="@style/Cryonix.Button.Primary"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_margin="@dimen/space_24"
+        android:enabled="false"
+        android:text="@string/button_continue" />
+</LinearLayout>
